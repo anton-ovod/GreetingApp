@@ -3,16 +3,16 @@
 }
 @model UserNameModel
 
-<div class="text-center">
+<form asp-aspasp-controller="Greeting" asp-action="Greet">
     <h1>Hello!</h1>
-
-    <form asp-aspasp-controller="Greeting" asp-action="Greet">
-        <div class="text-center">
+    <div class="row">
+        <div class="col-40">
             <label asp-for="UserName"></label>
-            <input asp-for="UserName" />
-            <span asp-validation-for="UserName"></span>
         </div>
-        <input type="submit" value="Greet Me!" />
-    </form>
-
-</div>
+        <div class="col-60">
+            <input asp-for="UserName" />
+        </div>
+    </div>
+    <span asp-validation-for="UserName"></span>
+    <input type="submit" value="Greet Me!" />
+</form>
