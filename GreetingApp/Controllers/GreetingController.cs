@@ -4,21 +4,16 @@ using System.Diagnostics;
 
 namespace GreetingApp.Controllers
 {
-    public class HomeController : Controller
+    public class GreetingController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<GreetingController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public GreetingController(ILogger<GreetingController> logger)
         {
             _logger = logger;
         }
 
         public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult Privacy()
         {
             return View();
         }
