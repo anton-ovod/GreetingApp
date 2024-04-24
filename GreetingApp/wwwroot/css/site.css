@@ -18,9 +18,8 @@ html{
     font-family: "Lekton";
 }
 
-body{
+body {
     background-color: var(--main-background-color);
-    padding: 0.8rem;
     display: flex;
     height: 100vh;
     flex-direction: column;
@@ -69,7 +68,8 @@ nav a.nav-page:hover {
     align-items: center;
 }
 
-.main-container form {
+.main-container form,
+.greet-card{
     width: 40%;
     background-color: var(--contrast-background-color);
     padding: 1rem;
@@ -78,6 +78,10 @@ nav a.nav-page:hover {
     text-align: center;
     font-size: 1.5rem;
     border-radius: 12px;
+}
+
+.greet-card p{
+    font-size: 3rem;
 }
 
 .col-40 {
@@ -112,7 +116,8 @@ input[type=text]{
     text-align: center;
 }
 
-input[type=submit]{
+input[type=submit],
+a.back{
     display: block;
     padding: 0.7rem;
     font-size: 1.5rem;
@@ -122,10 +127,12 @@ input[type=submit]{
     border: 2px solid var(--secondary-background-color);
     border-radius: 12px;
     cursor: pointer;
+    text-decoration: none;
     transition: 0.4s ease;
 }
 
-input[type=submit]:hover{
+input[type=submit]:hover,
+a.back:hover {
     background-color: var(--secondary-background-color);
 }
 
