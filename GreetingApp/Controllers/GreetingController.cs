@@ -18,6 +18,12 @@ namespace GreetingApp.Controllers
             return View();
         }
 
+        public IActionResult Greet(UserNameModel userNameModel)
+        {
+            if (ModelState.IsValid) return View(userNameModel);
+            return View("Index");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
